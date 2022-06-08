@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejoo-tho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/03 10:02:58 by ejoo-tho          #+#    #+#             */
-/*   Updated: 2022/06/03 10:16:08 by ejoo-tho         ###   ########.fr       */
+/*   Created: 2022/06/07 10:16:32 by ejoo-tho          #+#    #+#             */
+/*   Updated: 2022/06/07 11:02:11 by ejoo-tho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(int argc, char **argv)
 {
-	int used[255];
+	int	used[255];
 	int	i;
 	int	j;
 
@@ -23,16 +23,16 @@ int	main(int argc, char **argv)
 		i = 0;
 		while (i < 255)
 			used[i++] = 0;
-		i = 1;
+		i = 1
 		while (i < 3)
 		{
-			j = 0; 
+			j = 0;
 			while (argv[i][j])
 			{
-				if (!used[(unsigned char)argv[i][j]])
+				if (used[(unsigned char)argv[i][j]] == 0)
 				{
-					used[(unsigned char)argv[i][j]] = 1;
-					write(1, &argv[i][j], 1);
+					used[(unsigned char)argv[i][j]] == 1;
+					write (1, &argv[i][j], 1);
 				}
 				j++;
 			}
